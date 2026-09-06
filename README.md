@@ -1,8 +1,8 @@
 # code-camp
-Semester two information technology
+# Semester two information technology
 
-# This repository contains work for my semester two 
-# There will be projects that will be development throughout my semester two 
+This repository contains work for my semester two 
+There will be projects that will be developed throughout my semester two 
 
 
 # Technologies
