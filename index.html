@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise Bakery — Home</title>
+  <meta name="description" content="Sunrise Bakery is a neighbourhood bakery serving fresh bread, pastries and custom cakes daily." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>BADI COMPANIES LIMITED</h1>
-    </header>
-    
-    <main>
-        <p>This is a website for Badi companies limited</p>
-    </main>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <footer>
-        <p>LIGIWA GABRIEL BADI</p>
-    </footer>
+  <header class="site-header">
+    <div class="container">
+      <p class="site-title"><a href="index.html">Sunrise Bakery</a></p>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact &amp; Orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Fresh bread and pastries, baked every morning</h1>
+        <p>
+          Sunrise Bakery has been serving our neighbourhood since 2015 with
+          scratch-made bread, seasonal pastries, and custom cakes for every
+          occasion.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About our bakery</h2>
+        <p>
+          Every loaf and pastry is prepared by hand in our small kitchen
+          using local flour, butter, and fruit whenever we can source it.
+          We open at 6:30am so early risers can pick up something warm on
+          the way to work.
+        </p>
+        <p>
+          Want to see everything we bake?
+          <a href="menu.html">Browse our full bakery menu</a> or
+          <a href="contact.html">get in touch to place a custom cake order</a>.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading">This week's featured bakes</h2>
+        <div class="card-grid">
+
+          <article class="card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop"
+                alt="A rustic sourdough loaf with a golden, floured crust, cut in half to show the open crumb inside" />
+              <figcaption>Classic Sourdough — baked fresh every morning</figcaption>
+            </figure>
+            <h3>Classic Sourdough</h3>
+            <p>Naturally leavened with a 24-hour ferment for a tangy flavour and chewy crust.</p>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop"
+                alt="Three flaky butter croissants arranged on a wooden board, dusted lightly with flour" />
+              <figcaption>Butter Croissants — laminated with French butter</figcaption>
+            </figure>
+            <h3>Butter Croissants</h3>
+            <p>Layered and folded over three days to get that light, flaky texture.</p>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&auto=format&fit=crop"
+                alt="A round chocolate layer cake topped with fresh raspberries and a dusting of cocoa powder" />
+              <figcaption>Custom Celebration Cakes — made to order</figcaption>
+            </figure>
+            <h3>Celebration Cakes</h3>
+            <p>Tell us the flavour, size, and occasion and we will design a cake to match.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Sunrise Bakery. All rights reserved.</p>
+      <p><a href="contact.html">Visit us or send a message</a></p>
+    </div>
+  </footer>
 </body>
 </html>

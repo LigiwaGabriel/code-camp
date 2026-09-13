@@ -1,0 +1,293 @@
+/* ==========================================================================
+   Sunrise Bakery — shared stylesheet
+   ========================================================================== */
+
+:root {
+  --color-bg: #fffaf3;
+  --color-text: #2e2420;
+  --color-primary: #7a3b2e;
+  --color-primary-dark: #58281e;
+  --color-accent: #d98c3d;
+  --color-surface: #ffffff;
+  --color-border: #e6d8c8;
+  --max-width: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* ---- Accessibility: visible skip link ---- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-primary-dark);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  border-radius: 0 0 6px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+/* ---- Layout helpers ---- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Header & primary navigation ---- */
+.site-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 3px solid transparent;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+  border-bottom-color: var(--color-accent);
+}
+
+.primary-nav a[aria-current="page"] {
+  border-bottom-color: #fff;
+}
+
+/* ---- Hero ---- */
+.hero {
+  background-color: #f3e3cd;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: 2.25rem;
+  color: var(--color-primary-dark);
+}
+
+.hero p {
+  max-width: 40rem;
+  margin: 0.5rem auto 0;
+}
+
+/* ---- Generic section spacing ---- */
+main section {
+  padding: 2.5rem 0;
+}
+
+main section + section {
+  border-top: 1px solid var(--color-border);
+}
+
+h2 {
+  color: var(--color-primary-dark);
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ---- Card / article grid (used for featured items and menu items) ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.card figcaption {
+  font-size: 0.9rem;
+  color: #6b5a4e;
+  margin-top: 0.25rem;
+}
+
+/* ---- Two-column layout for contact page ---- */
+.two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 700px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Forms ---- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 32rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  padding: 0 0.4rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #b9a68f;
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.hint {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #6b5a4e;
+  margin-top: 0.2rem;
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--color-primary-dark);
+}
+
+/* ---- Aside / info box ---- */
+aside.info-box {
+  background-color: #f3e3cd;
+  border-radius: 8px;
+  padding: 1.25rem;
+  align-self: start;
+}
+
+aside.info-box h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: #f3e3cd;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #fff;
+}
